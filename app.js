@@ -16,6 +16,8 @@ app.use(
     origin: [process.env.FRONTEND_URL],
     methods: ["GET", "PUT", "DELETE", "POST"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"], // Ensure headers are allowed
+    optionsSuccessStatus: 200, // For legacy
   })
 );
 
